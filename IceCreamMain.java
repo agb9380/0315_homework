@@ -46,10 +46,10 @@ public class IceCreamMain {
 		System.out.println("아이스크림 구입 개수 :"); // 키보드 입력받으면서 문제가 발생할 예정임.. 알아서 해결해보기
 		int iceNum = sc.nextInt();
 
-		IceCream [] iceArr = new IceCream[iceNum]; // 입력한 수 만큼의 인스턴스를 생성하기 위해
+		IceCream [] iceArr = new IceCream[iceNum]; // 입력한 수 만큼의 인스턴스를 생성하기 위해, [] 이 형태는 numll값을 가진 배열을 우선 생성한 것
 
 		for (int j = 0; j < iceNum; j++) {
-			iceArr[j] = new IceCream(); // 실제 메모리값을 만듦, 배열에 저장
+			iceArr[j] = new IceCream(); // 실제 메모리값을 만듦, 배열에 저장, (); 이걸로 클래스의 값이 직접 들어갈 수 있도록 만드는것 여기서는 (name, price)
 		}
 
 		// iceArr을 iceNum만큼 생성해야함
