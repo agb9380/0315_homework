@@ -1,55 +1,3 @@
-package sugang0315;
-
-import java.util.Scanner;
-
-public class IceCreamMain {
-
-	public static void main(String[] args) {
-
-		Scanner sc = new Scanner(System.in);
-
-		System.out.println("아이스크림 구입 개수 :"); // 키보드 입력받으면서 문제가 발생할 예정임.. 알아서 해결해보기
-		int iceNum = sc.nextInt();
-
-		IceCream[] iceArr = new IceCream[iceNum];
-		
-		
-		for(int j=0; j< iceNum; j++) {
-			iceArr[j] = new IceCream(); // 실제 메모리값을 만듦
-		}
-		
-		
-		//iceArr 을 iceNum만큼 생성해야함
-		
-		int icesum= 0;
-		int n = 0;
-		int d =1;
-
-		for (int i = 0; i < iceArr.length; i++) {
-			n++;
-
-			System.out.println("***" + n + "번 째 아이스크림 구매 정보 입력");
-
-			System.out.println("아이스크림명 :");
-			iceArr[i].name = sc.next(); // next는 공백없이 받아야함
-
-			System.out.println("아이스크림 가격: ");
-			iceArr[i].price = sc.nextInt();
-			
-			icesum += iceArr[i].price ;
-			
-			
-		}
-		System.out.println("번호  아이스크림 명  아이스크림 가격");
-		
-		for (int i = 0; i<iceArr.length; i++) {
-			System.out.println((i+1) + "    " + iceArr[i].name + "         " + iceArr[i].price);
-		}
-			System.out.println("총합 :" + icesum );
-
-	}
-}
-
 /*
  * 아이스크림 몇 개 구입할꺼야? : 4
  * 
@@ -86,3 +34,52 @@ public class IceCreamMain {
  * 
  * 
  */
+
+package sugang0315;
+
+import java.util.Scanner;
+
+public class IceCreamMain {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("아이스크림 구입 개수 :"); // 키보드 입력받으면서 문제가 발생할 예정임.. 알아서 해결해보기
+		int iceNum = sc.nextInt();
+
+		IceCream[] iceArr = new IceCream[iceNum];
+
+		for (int j = 0; j < iceNum; j++) {
+			iceArr[j] = new IceCream(); // 실제 메모리값을 만듦
+		}
+
+		// iceArr 을 iceNum만큼 생성해야함
+
+		int icesum = 0;
+		int n = 0;
+		int d = 1;
+
+		for (int i = 0; i < iceArr.length; i++) {
+			n++;
+
+			System.out.println("***" + n + "번 째 아이스크림 구매 정보 입력");
+
+			System.out.println("아이스크림명 :");
+			iceArr[i].name = sc.next(); // next는 공백없이 받아야함
+
+			System.out.println("아이스크림 가격: ");
+			iceArr[i].price = sc.nextInt();
+
+			icesum += iceArr[i].price;
+
+		}
+		System.out.println("번호  아이스크림명  아이스크림 가격");
+
+		for (int i = 0; i < iceArr.length; i++) {
+			System.out.println((i + 1) + "    " + iceArr[i].name + "         " + iceArr[i].price);
+		}
+		System.out.println("총합 :" + icesum);
+
+	}
+}
