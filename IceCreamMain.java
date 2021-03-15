@@ -58,7 +58,6 @@ public class IceCreamMain {
 
 		int icesum = 0;
 		int n = 0;
-		int d = 1;
 
 		for (int i = 0; i < iceArr.length; i++) {
 			n++;
