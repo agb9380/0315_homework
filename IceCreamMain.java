@@ -23,6 +23,7 @@ public class IceCreamMain {
 		
 		int icesum= 0;
 		int n = 0;
+		int d =1;
 
 		for (int i = 0; i < iceArr.length; i++) {
 			n++;
@@ -35,15 +36,16 @@ public class IceCreamMain {
 			System.out.println("아이스크림 가격: ");
 			iceArr[i].price = sc.nextInt();
 			
-			//icesum += iceArr[i].price ;
+			icesum += iceArr[i].price ;
 			
 			
 		}
-
-		for (IceCream c : iceArr) { // 객체들을 출력하는 방법으로는 주로 1.5 버전의 방법으로 사용함
-			System.out.println("아이스크림명: " + c.name + ", 아이스크림 가격: " + c.price);
-			
-		}//System.out.println("총합 :" + icesum );
+		System.out.println("번호  아이스크림 명  아이스크림 가격");
+		
+		for (int i = 0; i<iceArr.length; i++) {
+			System.out.println((i+1) + "    " + iceArr[i].name + "         " + iceArr[i].price);
+		}
+			System.out.println("총합 :" + icesum );
 
 	}
 }
