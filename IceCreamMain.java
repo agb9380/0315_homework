@@ -59,7 +59,7 @@ public class IceCreamMain {
 
 		for (int i = 0; i < iceArr.length; i++) {
 			n++;
-
+			// System.out.printf("***%d번째 아이스크림 구매정보 입력: \n", i+1); 이렇게 printf 써주면 변수 n은 필요없음
 			System.out.println("***" + n + "번 째 아이스크림 구매 정보 입력");
 
 			System.out.println("아이스크림명 :");
